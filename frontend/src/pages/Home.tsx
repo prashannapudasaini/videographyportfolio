@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Lock, Play, ArrowRight } from 'lucide-react';
+import { ExternalLink, Lock, Play } from 'lucide-react';
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
