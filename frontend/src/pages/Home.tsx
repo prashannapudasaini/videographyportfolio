@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Lock, Play } from 'lucide-react';
+import { ExternalLink, Lock, Play, Star } from 'lucide-react';
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -495,46 +495,38 @@ export default function Home() {
       </section>
 
       {/* 09. TESTIMONIALS */}
-      <section className="py-10 px-6 md:px-12 bg-brand-section-alt border-y border-brand-border mt-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-brand-primary-text text-lg font-bold uppercase tracking-[0.2em]">Testimonials</h2>
+      <section className="py-8 px-6 md:px-12 bg-brand-section-alt border-y border-brand-border mt-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-brand-primary-text text-base font-bold uppercase tracking-[0.2em]">Testimonials</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-x-24 md:gap-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-16">
             <div className="flex flex-col">
-              <p className="text-2xl font-serif text-brand-primary-text italic leading-snug mb-8">
+              <div className="flex gap-1 mb-4 text-brand-primary-text">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+              <p className="text-xl font-serif text-brand-primary-text italic leading-snug mb-6">
                 "Sunil completely transformed our campaign. His understanding of pacing and his eye for color is unmatched. He didn't just edit the video; he found the soul of the story we were trying to tell."
               </p>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-brand-primary-text mb-1">Sarah Jenkins</p>
-                <p className="text-sm font-light text-brand-secondary-text">Director, B Star Films</p>
+                <p className="text-xs font-light text-brand-secondary-text">Director, B Star Films</p>
               </div>
             </div>
             <div className="flex flex-col">
-              <p className="text-2xl font-serif text-brand-primary-text italic leading-snug mb-8">
+              <div className="flex gap-1 mb-4 text-brand-primary-text">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+              <p className="text-xl font-serif text-brand-primary-text italic leading-snug mb-6">
                 "We hand over all our high-end commercial finishing to Sunil. His Resolve workflow is bulletproof, and the cinematic looks he develops always exceed client expectations."
               </p>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-brand-primary-text mb-1">Mark O'Connor</p>
-                <p className="text-sm font-light text-brand-secondary-text">Producer, Gallery House</p>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-2xl font-serif text-brand-primary-text italic leading-snug mb-8">
-                "Finding an editor who understands both the technical demands of finishing and the emotional nuance of a scene is rare. Sunil brings both to every project."
-              </p>
-              <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-brand-primary-text mb-1">David Chen</p>
-                <p className="text-sm font-light text-brand-secondary-text">Creative Director, Wave Studio</p>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-2xl font-serif text-brand-primary-text italic leading-snug mb-8">
-                "The reels he cut for our latest campaign drove a 300% increase in engagement. Fast, professional, and incredibly sharp instincts for what works on social."
-              </p>
-              <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-brand-primary-text mb-1">Elena Rodriguez</p>
-                <p className="text-sm font-light text-brand-secondary-text">Head of Marketing, Unique</p>
+                <p className="text-xs font-light text-brand-secondary-text">Producer, Gallery House</p>
               </div>
             </div>
           </div>
@@ -542,23 +534,23 @@ export default function Home() {
       </section>
 
       {/* 11. FINAL CTA */}
-      <section className="py-10 px-6 md:px-12 text-center border-y border-brand-border bg-brand-section-alt mt-10">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-serif text-brand-primary-text mb-8 tracking-tight">Have A Story To Tell?</h2>
-          <p className="text-xl md:text-2xl text-brand-secondary-text font-light mb-16 leading-relaxed">
+      <section className="py-8 px-6 md:px-12 text-center border-y border-brand-border bg-brand-section-alt mt-8">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-brand-primary-text mb-6 tracking-tight">Have A Story To Tell?</h2>
+          <p className="text-lg md:text-xl text-brand-secondary-text font-light mb-8 leading-relaxed">
             Let's turn your footage<br />into something people remember.
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-6 mb-16">
-            <span className="text-brand-primary-text font-medium text-lg">contact@sunilsharma.com</span>
-            <div className="flex items-center gap-4 text-brand-secondary-text text-sm font-medium tracking-widest uppercase">
+          <div className="flex flex-col items-center justify-center gap-4 mb-8">
+            <span className="text-brand-primary-text font-medium text-base">contact@sunilsharma.com</span>
+            <div className="flex items-center gap-3 text-brand-secondary-text text-xs font-medium tracking-widest uppercase">
               <span>Kathmandu, Nepal</span>
               <span className="w-1 h-1 rounded-full bg-brand-border"></span>
               <span>Available Worldwide</span>
             </div>
           </div>
 
-          <Link to="/contact" className="inline-block bg-[#111111] text-white px-12 py-5 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-black transition-colors shadow-lg">
+          <Link to="/contact" className="inline-block bg-[#111111] text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black transition-colors shadow-lg">
             Start a Project
           </Link>
         </div>
